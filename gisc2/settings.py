@@ -10,6 +10,8 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from generate_key import generate_key
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -17,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'o5)^7qwzk&sjg64ds%3(z^_g4^)+578g261fjm&9g*r1fhn9c9'
+SECRET_KEY = '{}'.format(generate_key(40, 128))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
