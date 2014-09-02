@@ -1,0 +1,6 @@
+[{"fields": {"status": true, "name": "Unit1", "desc": "Great"},
+    "model": "units.unit", "pk": 1},
+        {"fields": {"status": true, "name": "Unit2", "desc": "Fun"},
+        "model": "units.unit", "pk": 2},
+            {"fields": {"status": false, "name": "Unit3", "desc": "Outstanding"},
+            "model": "units.unit", "pk": 3}]
