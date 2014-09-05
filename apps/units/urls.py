@@ -1,4 +1,6 @@
 from django.conf.urls import patterns, include, url
+from apps.units import views
+
 
 urlpatterns = patterns('',
     # Examples:
@@ -6,4 +8,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     # url(r'^admin/', include(admin.site.urls)),
+    url(r'^main$', views.MainView.as_view()),
+    url(r'^about$', views.AboutView.as_view()),
+
 )
