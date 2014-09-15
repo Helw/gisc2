@@ -8,4 +8,5 @@ urlpatterns = patterns('',
 
     # url(r'^admin/', include(admin.site.urls)),
     url('^units$', json_views.UserCollection.as_view(), name='units'),
+    url('^counties$', json_views.CountyCollection.as_view(), name='counties'),
 )

@@ -3,3 +3,4 @@ from apps.units import models
 
 # Register your models here.
 admin.site.register(models.Unit)
+admin.site.register(models.County)

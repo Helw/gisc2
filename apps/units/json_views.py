@@ -23,7 +23,6 @@ class MarkerFilter(django_filters.FilterSet):
         fields = ['id', 'status', 'desc']
 
 
-
 class UserCollection(generics.ListAPIView):
     """
     API endpoint that allows users to be viewed or edited.
@@ -31,3 +30,20 @@ class UserCollection(generics.ListAPIView):
     queryset = models.Unit.objects.all()
     serializer_class = serializers.UnitSerializer
     filter_class = MarkerFilter
+
+
+class CountyFilter(django_filters.FilterSet):
+    id = IntegerListFilter(name='id', lookup_type='in')
+
+    class Meta:
+        model = models.County
+        fields = ['id', 'name']
+
+
+class CountyCollection(generics.ListAPIView):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = models.County.objects.all()
+    serializer_class = serializers.CountiesSerializer
+    filter_class = CountyFilter
