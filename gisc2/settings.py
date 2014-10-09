@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'bootstrap',
     'analytical',
     'django.contrib.gis',
+    'apps.world',
 )
 
 MIDDLEWARE_CLASSES = (
